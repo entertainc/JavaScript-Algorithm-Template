@@ -23,13 +23,13 @@ class Heap {
             }
         }
 
-        function down(index) { // 和两个儿子节点比较 与最小的进行交换
-            let t = index;
-            if (index * 2 <= this.size && this.heap[index * 2] < this.heap[t]) t = u * 2;
-            if (index * 2 + 1 <= this.size &&  this.heap[index * 2 + 1] < this.heap[t]) t = u * 2 + 1;
+        function down(u) { // 和两个儿子节点比较 与最小的进行交换
+            let t = u;
+            if (u * 2 <= this.size && this.heap[u * 2] < this.heap[t]) t = u * 2;
+            if (u * 2 + 1 <= this.size && this.heap[u * 2 + 1] < this.heap[t]) t = u * 2 + 1;
 
-            if (index != t) {
-                [this.heap[index], this.heap[t]] = [this.heap[t], this.heap[index]];
+            if (u != t) {
+                [this.heap[u], this.heap[t]] = [this.heap[t], this.heap[u]];
                 down(t);
             }
         }
