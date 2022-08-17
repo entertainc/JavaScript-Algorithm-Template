@@ -33,7 +33,7 @@ build(1, 1, len, number);
 console.log(tArr);
 
 // 2. 单点修改，将numbers[x]的值修改为v
-const change = (p, l, r, x, v) => {
+const change = (p, l, r, x, v) => { // x是numbers的下标，v是修改后的值
   if (tArr[p].l === tArr[p].r) {
     console.log('到达');
     tArr[p].data = v;

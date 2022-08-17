@@ -30,7 +30,7 @@ function dijkstra(n) {
         let t = -1;
 
         for (let j = 1; j <= n; j ++) {
-            if (!s[j] && (t == -1 || dist[t] > dist[j]))
+            if (!s[j] && (t == -1 || dist[t] > dist[j])) // dist[t] > dist[j] 表示当前这个点的距离不是最近的
                 t = j;
         }
 
