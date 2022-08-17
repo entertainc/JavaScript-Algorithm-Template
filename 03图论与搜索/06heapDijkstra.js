@@ -53,7 +53,7 @@ function dijkstra(n, heap = new Heap()) {
 
     while (heap.size) {
         let t = heap.top();
-        heap.pop();
+        heap.shift();
 
         let num = t[1], dis = t[0];
 
