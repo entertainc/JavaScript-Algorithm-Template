@@ -16,7 +16,7 @@ function SPFA(n) { // 到n的最短路
     st[1] = true;
 
     while(queue.length) {
-        let t = queue.pop();
+        let t = queue.shift();
 
         st[t] = false;
 
