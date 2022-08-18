@@ -3,10 +3,11 @@
 const NodeNum = 100;
 const dis = [[]];
 const floyd = () => {
-	for (let k = 0; k < NodeNum; k++) {
-		for (let j = 0; j < NodeNum; j++) {
-			for (let i = 0; i < NodeNum; i++)
+    for (let k = 0; k < NodeNum; k++) {
+        for (let i = 0; i < NodeNum; i++) {
+            for (let j = 0; j < NodeNum; j++) {
 				dis[i][j] = Math.min(dis[i][j], dis[i][k] + dis[k][j]);
+            }
 		}
 	}
 };
