@@ -18,8 +18,8 @@ const spfa = n => { // 到n的最短路
 
     for (let i = h[node]; i !== -1; i = ne[i]) {
       let j = e[i];
-      if (dis[j] > dis[t] + w[i]) {
-        dis[j] = dis[t] + w[i];
+      if (dis[j] > dis[node] + w[i]) {
+        dis[j] = dis[node] + w[i];
         if (!st[j]) {
           queue.push(j);
           st[j] = true;
